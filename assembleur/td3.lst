@@ -1,0 +1,64 @@
+
+Fichier 'LST' issue du fichier 'ASM' : 
+/home/eleve/IENAC/robertma/Documents/assembleur/td3.asm
+
+-------------------------------------------------------------------------------------
+| Adresse  |  Code  |  Ligne |       Label          |     Instruction      |  Type  |
+-------------------------------------------------------------------------------------
+|   0000   |  A213  |     6  |                      | jmp debut            | I      |
+|   0001   |  FFFF  |        |                      | FFFF                 | D      |
+|   0002   |  FFFF  |        |                      | FFFF                 | D      |
+|   0003   |  FFFF  |        |                      | FFFF                 | D      |
+|   0004   |  FFFF  |        |                      | FFFF                 | D      |
+|   0005   |  FFFF  |        |                      | FFFF                 | D      |
+|   0006   |  FFFF  |        |                      | FFFF                 | D      |
+|   0007   |  FFFF  |        |                      | FFFF                 | D      |
+|   0008   |  0004  |        |               nombre | 0004                 | D      |
+|   0009   |  0003  |        |                 mult | 0003                 | D      |
+|   000A   |  FFFF  |        |             resultat | FFFF                 | D      |
+|   000B   |  FFFF  |        |                      | FFFF                 | D      |
+|   000C   |  FFFF  |        |                      | FFFF                 | D      |
+|   000D   |  FFFF  |        |                      | FFFF                 | D      |
+|   000E   |  FFFF  |        |                      | FFFF                 | D      |
+|   000F   |  FFFF  |        |                      | FFFF                 | D      |
+|   0010   |  FFFF  |        |                      | FFFF                 | D      |
+|   0011   |  FFFF  |        |                      | FFFF                 | D      |
+|   0012   |  FFFF  |        |                      | FFFF                 | D      |
+|   0013   |  FFFF  |        |                      | FFFF                 | D      |
+|   0014   |  B001  |    12  |                debut | ldr r0,1             | I      |
+|   0015   |  5FF3  |    13  |                      | str [ModeEtat], r0   | I      |
+|   0016   |  0FF0  |    14  |                      | ldr r0,[PortEntree]  | I      |
+|   0017   |  D010  |    15  |                      | ldr r1,r0            | I      |
+|   0018   |  0009  |    16  |                      | ldr r0,[mult]        | I      |
+|   0019   |  D020  |    17  |                      | ldr r2,r0            | I      |
+|   001A   |  B000  |    18  |                      | ldr r0,0             | I      |
+|   001B   |  E001  |    19  |                 bcle | add r0,r0r1          | I      |
+|   001C   |  FE22  |    20  |                      | dec r2               | I      |
+|   001D   |  ACFD  |    21  |                      | jnz bcle             | I      |
+|   001E   |  5FF2  |    22  |                      | str [PortSortie],r0  | I      |
+|   001F   |  FEAC  |    23  |                  fin | hlt                  | I      |
+-------------------------------------------------------------------------------------
+
+Table des Etiquettes :
+----------------------
+nombre               --> 0x0008
+mult                 --> 0x0009
+resultat             --> 0x000A
+debut                --> 0x0014
+bcle                 --> 0x001B
+fin                  --> 0x001F
+
+Table des Symboles :
+--------------------
+ModeEtat             --> 0x0FF3
+PortEntree           --> 0x0FF0
+PortSortie           --> 0x0FF2
+
+Informations de creation issues de la compilation :
+----------------------------------------------------
+IP_Address                 :10.3.54.17
+Host_Name                  :E2-003-17-L.eleve.interne.enac
+TAG_UID pour fichier 'asm' :aeee698087dfb802dedec1e4738f852f11097a61e7a11ab66f0198c9721f5994--date :Tue, 15 Sep 2026 12:06:18.7205093--taille :617
+TAG_UID pour fichier 'sim' :6822e4a6177ff43dcef95840f624178cc4bcc49c2da88d5a30e8c42103f854df--date :Tue, 15 Sep 2026 12:06:32.3804822--taille :159
+TAG_UID pour fichier 'lst' :ebd5b514d121e65aeb730a86563aefb9a1a8bc8324531948fe47752f7c675c17--date :Tue, 15 Sep 2026 12:06:32.3961043--taille :3571
+----------------------------------------------------

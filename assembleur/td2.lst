@@ -1,0 +1,60 @@
+
+Fichier 'LST' issue du fichier 'ASM' : 
+/home/eleve/IENAC/robertma/Documents/assembleur/td2.asm
+
+-------------------------------------------------------------------------------------
+| Adresse  |  Code  |  Ligne |       Label          |     Instruction      |  Type  |
+-------------------------------------------------------------------------------------
+|   0000   |  A213  |     4  |                      | jmp debut            | I      |
+|   0001   |  FFFF  |        |                      | FFFF                 | D      |
+|   0002   |  FFFF  |        |                      | FFFF                 | D      |
+|   0003   |  FFFF  |        |                      | FFFF                 | D      |
+|   0004   |  FFFF  |        |                      | FFFF                 | D      |
+|   0005   |  FFFF  |        |                      | FFFF                 | D      |
+|   0006   |  FFFF  |        |                      | FFFF                 | D      |
+|   0007   |  FFFF  |        |                      | FFFF                 | D      |
+|   0008   |  0004  |        |               nombre | 0004                 | D      |
+|   0009   |  0003  |        |                 mult | 0003                 | D      |
+|   000A   |  0000  |        |             resultat | 0000                 | D      |
+|   000B   |  FFFF  |        |                      | FFFF                 | D      |
+|   000C   |  FFFF  |        |                      | FFFF                 | D      |
+|   000D   |  FFFF  |        |                      | FFFF                 | D      |
+|   000E   |  FFFF  |        |                      | FFFF                 | D      |
+|   000F   |  FFFF  |        |                      | FFFF                 | D      |
+|   0010   |  FFFF  |        |                      | FFFF                 | D      |
+|   0011   |  FFFF  |        |                      | FFFF                 | D      |
+|   0012   |  FFFF  |        |                      | FFFF                 | D      |
+|   0013   |  FFFF  |        |                      | FFFF                 | D      |
+|   0014   |  0008  |    11  |                debut | ldr r0,[nombre]      | I      |
+|   0015   |  D010  |    12  |                      | ldr r1,r0            | I      |
+|   0016   |  0009  |    13  |                      | ldr r0,[mult]        | I      |
+|   0017   |  D020  |    14  |                      | ldr r2,r0            | I      |
+|   0018   |  B000  |    15  |                      | ldr r0,0             | I      |
+|   0019   |  E001  |    16  |                 bcle | add r0,r0r1          | I      |
+|   001A   |  FE22  |    17  |                      | dec r2               | I      |
+|   001B   |  ACFD  |    18  |                      | jnz bcle             | I      |
+|   001C   |  500A  |    19  |                      | str [resultat],r0    | I      |
+|   001D   |  FEAC  |    20  |                  fin | hlt                  | I      |
+-------------------------------------------------------------------------------------
+
+Table des Etiquettes :
+----------------------
+nombre               --> 0x0008
+mult                 --> 0x0009
+resultat             --> 0x000A
+debut                --> 0x0014
+bcle                 --> 0x0019
+fin                  --> 0x001D
+
+Table des Symboles :
+--------------------
+
+
+Informations de creation issues de la compilation :
+----------------------------------------------------
+IP_Address                 :10.3.49.206
+Host_Name                  :C012-06-L.eleve.interne.enac
+TAG_UID pour fichier 'asm' :3fdfab6e105e501e183883af4ae1c4a353b99251cb06e836ab2be9f76c2f5810--date :Wed, 10 Sep 2025 16:44:37.3561904--taille :809
+TAG_UID pour fichier 'sim' :275bc5f815769a645a17f279eddb479189df167b9a9e171db23675018bdd96e0--date :Wed, 10 Sep 2025 16:45:08.362418--taille :149
+TAG_UID pour fichier 'lst' :2ee1c95288b605c64edc57254937a3217b78170a7bdfd125dc54cbcdc9404db4--date :Wed, 10 Sep 2025 16:45:08.3780463--taille :3304
+----------------------------------------------------

@@ -1,0 +1,61 @@
+
+Fichier 'LST' issue du fichier 'ASM' : 
+/home/eleve/IENAC/robertma/Documents/assembleur/td1.asm
+
+-------------------------------------------------------------------------------------
+| Adresse  |  Code  |  Ligne |       Label          |     Instruction      |  Type  |
+-------------------------------------------------------------------------------------
+|   0000   |  A213  |     6  |                      | jmp debut            | I      |
+|   0001   |  FFFF  |        |                      | FFFF                 | D      |
+|   0002   |  FFFF  |        |                      | FFFF                 | D      |
+|   0003   |  FFFF  |        |                      | FFFF                 | D      |
+|   0004   |  FFFF  |        |                      | FFFF                 | D      |
+|   0005   |  FFFF  |        |                      | FFFF                 | D      |
+|   0006   |  FFFF  |        |                      | FFFF                 | D      |
+|   0007   |  FFFF  |        |                      | FFFF                 | D      |
+|   0008   |  000A  |        |               taille | 000A                 | D      |
+|   0009   |  FFFF  |        |              tableau | FFFF                 | D      |
+|   000A   |  FFFF  |        |                      | FFFF                 | D      |
+|   000B   |  FFFF  |        |                      | FFFF                 | D      |
+|   000C   |  FFFF  |        |                      | FFFF                 | D      |
+|   000D   |  FFFF  |        |                      | FFFF                 | D      |
+|   000E   |  FFFF  |        |                      | FFFF                 | D      |
+|   000F   |  FFFF  |        |                      | FFFF                 | D      |
+|   0010   |  FFFF  |        |                      | FFFF                 | D      |
+|   0011   |  FFFF  |        |                      | FFFF                 | D      |
+|   0012   |  FFFF  |        |                      | FFFF                 | D      |
+|   0013   |  FFFF  |        |                      | FFFF                 | D      |
+|   0014   |  0008  |    13  |                debut | ldr r0,[taille]      | I      |
+|   0015   |  D010  |    14  |                      | ldr r1,r0            | I      |
+|   0016   |  B000  |    15  |                      | ldr r0,val_debut     | I      |
+|   0017   |  D020  |    16  |                      | ldr r2,r0            | I      |
+|   0018   |  B009  |    17  |                      | ldr r0,tableau       | I      |
+|   0019   |  D040  |    18  |                      | ldr r4,r0            | I      |
+|   001A   |  C242  |    19  |                 bcle | str [r4],r2          | I      |
+|   001B   |  FE12  |    20  |                      | inc r2               | I      |
+|   001C   |  FE14  |    21  |                      | inc r4               | I      |
+|   001D   |  FE21  |    22  |                      | dec r1               | I      |
+|   001E   |  ACFB  |    23  |                      | jnz bcle             | I      |
+|   001F   |  FEAC  |    24  |                  fin | hlt                  | I      |
+-------------------------------------------------------------------------------------
+
+Table des Etiquettes :
+----------------------
+taille               --> 0x0008
+tableau              --> 0x0009
+debut                --> 0x0014
+bcle                 --> 0x001A
+fin                  --> 0x001F
+
+Table des Symboles :
+--------------------
+val_debut            --> 0
+
+Informations de creation issues de la compilation :
+----------------------------------------------------
+IP_Address                 :10.3.49.206
+Host_Name                  :C012-06-L.eleve.interne.enac
+TAG_UID pour fichier 'asm' :83a1365dee1a2fcb948b79bc0f581db14c0976712b53d9561a8c2fa91686a718--date :Wed, 10 Sep 2025 15:43:30.4430468--taille :1150
+TAG_UID pour fichier 'sim' :ea7090ec39f3eafeb69558ff41016a12b4191f900d9ef0c89464a8f3dc092bb0--date :Wed, 10 Sep 2025 15:44:05.906206--taille :159
+TAG_UID pour fichier 'lst' :84da3828130d598b24b1224b6d16d80c035e42437ffc71c48fe9533142f36189--date :Wed, 10 Sep 2025 15:44:05.906206--taille :3470
+----------------------------------------------------

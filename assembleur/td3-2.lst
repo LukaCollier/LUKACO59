@@ -1,0 +1,99 @@
+
+Fichier 'LST' issue du fichier 'ASM' : 
+/home/eleve/IENAC/robertma/Documents/assembleur/td3-2.asm
+
+-------------------------------------------------------------------------------------
+| Adresse  |  Code  |  Ligne |       Label          |     Instruction      |  Type  |
+-------------------------------------------------------------------------------------
+|   0000   |  A231  |     9  |                      | jmp debut            | I      |
+|   0001   |  FFFF  |        |                      | FFFF                 | D      |
+|   0002   |  FFFF  |        |                      | FFFF                 | D      |
+|   0003   |  FFFF  |        |                      | FFFF                 | D      |
+|   0004   |  FFFF  |        |                      | FFFF                 | D      |
+|   0005   |  FFFF  |        |                      | FFFF                 | D      |
+|   0006   |  FFFF  |        |                      | FFFF                 | D      |
+|   0007   |  FFFF  |        |                      | FFFF                 | D      |
+|   0008   |  FFFF  |        |                      | FFFF                 | D      |
+|   0009   |  FFFF  |        |                      | FFFF                 | D      |
+|   000A   |  0053  |        |              message | 0053                 | D      |
+|   000B   |  0069  |        |                      | 0069                 | D      |
+|   000C   |  006D  |        |                      | 006D                 | D      |
+|   000D   |  0063  |        |                      | 0063                 | D      |
+|   000E   |  0061  |        |                      | 0061                 | D      |
+|   000F   |  006C  |        |                      | 006C                 | D      |
+|   0010   |  0020  |        |                      | 0020                 | D      |
+|   0011   |  0049  |        |                      | 0049                 | D      |
+|   0012   |  0045  |        |                      | 0045                 | D      |
+|   0013   |  004E  |        |                      | 004E                 | D      |
+|   0014   |  0041  |        |                      | 0041                 | D      |
+|   0015   |  0043  |        |                      | 0043                 | D      |
+|   0016   |  0020  |        |                      | 0020                 | D      |
+|   0017   |  000D  |        |               taille | 000D                 | D      |
+|   0018   |  FFFF  |        |                      | FFFF                 | D      |
+|   0019   |  FFFF  |        |                      | FFFF                 | D      |
+|   001A   |  FFFF  |        |                      | FFFF                 | D      |
+|   001B   |  FFFF  |        |                      | FFFF                 | D      |
+|   001C   |  FFFF  |        |                      | FFFF                 | D      |
+|   001D   |  FFFF  |        |                      | FFFF                 | D      |
+|   001E   |  FFFF  |        |                      | FFFF                 | D      |
+|   001F   |  FFFF  |        |                      | FFFF                 | D      |
+|   0020   |  FFFF  |        |                      | FFFF                 | D      |
+|   0021   |  FFFF  |        |                      | FFFF                 | D      |
+|   0022   |  FFFF  |        |                      | FFFF                 | D      |
+|   0023   |  FFFF  |        |                      | FFFF                 | D      |
+|   0024   |  FFFF  |        |                      | FFFF                 | D      |
+|   0025   |  FFFF  |        |                      | FFFF                 | D      |
+|   0026   |  FFFF  |        |                      | FFFF                 | D      |
+|   0027   |  FFFF  |        |                      | FFFF                 | D      |
+|   0028   |  FFFF  |        |                      | FFFF                 | D      |
+|   0029   |  FFFF  |        |                      | FFFF                 | D      |
+|   002A   |  FFFF  |        |                      | FFFF                 | D      |
+|   002B   |  FFFF  |        |                      | FFFF                 | D      |
+|   002C   |  FFFF  |        |                      | FFFF                 | D      |
+|   002D   |  FFFF  |        |                      | FFFF                 | D      |
+|   002E   |  FFFF  |        |                      | FFFF                 | D      |
+|   002F   |  FFFF  |        |                      | FFFF                 | D      |
+|   0030   |  FFFF  |        |                      | FFFF                 | D      |
+|   0031   |  FFFF  |        |                      | FFFF                 | D      |
+|   0032   |  B002  |    16  |                debut | ldr r0, 2            | I      |
+|   0033   |  5FF5  |    17  |                      | str [SModeEtat], r0  | I      |
+|   0034   |  0017  |    18  |               reinit | ldr r0, [taille]     | I      |
+|   0035   |  D010  |    19  |                      | ldr r1, r0           | I      |
+|   0036   |  B00A  |    20  |                      | ldr r0, message      | I      |
+|   0037   |  D040  |    21  |                      | ldr r4, r0           | I      |
+|   0038   |  0FF5  |    24  |                 bcle | ldr r0, [SModeEtat]  | I      |
+|   0039   |  2003  |    25  |                      | ldr r2, [Masque]     | I      |
+|   003A   |  F002  |    26  |                      | and r0, r0r2         | I      |
+|   003B   |  AEFC  |    27  |                      | jz bcle              | I      |
+|   003C   |  C040  |    28  |                      | ldr r0, [r4]         | I      |
+|   003D   |  5FF4  |    29  |                      | str [SRxTx], r0      | I      |
+|   003E   |  FE14  |    30  |                      | inc r4               | I      |
+|   003F   |  FE21  |    31  |                      | dec r1               | I      |
+|   0040   |  ACF7  |    32  |                      | jnz bcle             | I      |
+|   0041   |  A1F2  |    33  |                      | jmp reinit           | I      |
+|   0042   |  FEAC  |    34  |                  fin | hlt                  | I      |
+-------------------------------------------------------------------------------------
+
+Table des Etiquettes :
+----------------------
+message              --> 0x000A
+taille               --> 0x0017
+debut                --> 0x0032
+reinit               --> 0x0034
+bcle                 --> 0x0038
+fin                  --> 0x0042
+
+Table des Symboles :
+--------------------
+SModeEtat            --> 0xFF5
+SRxTx                --> 0xFF4
+Masque               --> 0x0003
+
+Informations de creation issues de la compilation :
+----------------------------------------------------
+IP_Address                 :10.3.49.219
+Host_Name                  :C012-19-L.eleve.interne.enac
+TAG_UID pour fichier 'asm' :7d06cc6d204fe6fd90dc0eda799b605adf380aebd746505ef2fdc30992f93b0c--date :Tue, 15 Sep 2026 12:41:20.298937--taille :669
+TAG_UID pour fichier 'sim' :12fc8d3b4987f11cf290730e223a3af33e396299acc3f00d288a39c27035069b--date :Tue, 15 Sep 2026 13:17:07.5858593--taille :334
+TAG_UID pour fichier 'lst' :74352f4bb4beac068017d7b9832c0f183506b315a94b265446e9c4f079274edb--date :Tue, 15 Sep 2026 13:17:07.6014855--taille :6581
+----------------------------------------------------

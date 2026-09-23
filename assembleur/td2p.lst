@@ -1,0 +1,94 @@
+
+Fichier 'LST' issue du fichier 'ASM' : 
+/home/eleve/IENAC/robertma/Documents/assembleur/td2p.asm
+
+-------------------------------------------------------------------------------------
+| Adresse  |  Code  |  Ligne |       Label          |     Instruction      |  Type  |
+-------------------------------------------------------------------------------------
+|   0000   |  A227  |     2  |                      | jmp debut            | I      |
+|   0001   |  FFFF  |        |                      | FFFF                 | D      |
+|   0002   |  FFFF  |        |                      | FFFF                 | D      |
+|   0003   |  FFFF  |        |                      | FFFF                 | D      |
+|   0004   |  FFFF  |        |                      | FFFF                 | D      |
+|   0005   |  FFFF  |        |                      | FFFF                 | D      |
+|   0006   |  FFFF  |        |                      | FFFF                 | D      |
+|   0007   |  FFFF  |        |                      | FFFF                 | D      |
+|   0008   |  0001  |        |              nombre1 | 0001                 | D      |
+|   0009   |  0002  |        |              nombre2 | 0002                 | D      |
+|   000A   |  0003  |        |              nombre3 | 0003                 | D      |
+|   000B   |  0004  |        |                 mult | 0004                 | D      |
+|   000C   |  FFFF  |        |            resultat1 | FFFF                 | D      |
+|   000D   |  FFFF  |        |            resultat2 | FFFF                 | D      |
+|   000E   |  FFFF  |        |            resultat3 | FFFF                 | D      |
+|   000F   |  FFFF  |        |                      | FFFF                 | D      |
+|   0010   |  FFFF  |        |                      | FFFF                 | D      |
+|   0011   |  FFFF  |        |                      | FFFF                 | D      |
+|   0012   |  FFFF  |        |                      | FFFF                 | D      |
+|   0013   |  FFFF  |        |                      | FFFF                 | D      |
+|   0014   |  FFFF  |        |                 pile | FFFF                 | D      |
+|   0015   |  FFFF  |        |                      | FFFF                 | D      |
+|   0016   |  FFFF  |        |                      | FFFF                 | D      |
+|   0017   |  FFFF  |        |                      | FFFF                 | D      |
+|   0018   |  FFFF  |        |                      | FFFF                 | D      |
+|   0019   |  FFFF  |        |                      | FFFF                 | D      |
+|   001A   |  FFFF  |        |                      | FFFF                 | D      |
+|   001B   |  FFFF  |        |                      | FFFF                 | D      |
+|   001C   |  FFFF  |        |                      | FFFF                 | D      |
+|   001D   |  FFFF  |        |                      | FFFF                 | D      |
+|   001E   |  FFFF  |        |             fondpile | FFFF                 | D      |
+|   001F   |  C251  |    21  |           multiplier | push r1              | I      |
+|   0020   |  C252  |    22  |                      | push r2              | I      |
+|   0021   |  B000  |    23  |                      | ldr r0,0             | I      |
+|   0022   |  E001  |    24  |                 bcle | add r0,r0r1          | I      |
+|   0023   |  FE22  |    25  |                      | dec r2               | I      |
+|   0024   |  ACFD  |    26  |                      | jnz bcle             | I      |
+|   0025   |  C052  |    27  |                      | pop r2               | I      |
+|   0026   |  C051  |    28  |                      | pop r1               | I      |
+|   0027   |  C057  |    29  |                      | ret                  | I      |
+|   0028   |  B001  |    31  |                debut | ldr r0,1             | I      |
+|   0029   |  5FF3  |    32  |                      | str [ModeEtat],r0    | I      |
+|   002A   |  B01E  |    33  |                      | ldr r0,fondpile      | I      |
+|   002B   |  D060  |    34  |                      | ldr sp,r0            | I      |
+|   002C   |  1008  |    35  |                      | ldr r1,[nombre1]     | I      |
+|   002D   |  200B  |    36  |                      | ldr r2,[mult]        | I      |
+|   002E   |  B000  |    37  |                      | ldr r0,0             | I      |
+|   002F   |  A5EF  |    38  |                      | call multiplier      | I      |
+|   0030   |  500C  |    39  |                      | str [resultat1],r0   | I      |
+|   0031   |  B000  |    40  |                      | ldr r0,0             | I      |
+|   0032   |  1009  |    41  |                      | ldr r1,[nombre2]     | I      |
+|   0033   |  A5EB  |    42  |                      | call multiplier      | I      |
+|   0034   |  500D  |    43  |                      | str [resultat2],r0   | I      |
+|   0035   |  B000  |    44  |                      | ldr r0,0             | I      |
+|   0036   |  100A  |    45  |                      | ldr r1,[nombre3]     | I      |
+|   0037   |  A5E7  |    46  |                      | call multiplier      | I      |
+|   0038   |  500E  |    47  |                      | str [resultat3],r0   | I      |
+|   0039   |  FEAC  |    48  |                      | hlt                  | I      |
+-------------------------------------------------------------------------------------
+
+Table des Etiquettes :
+----------------------
+nombre1              --> 0x0008
+nombre2              --> 0x0009
+nombre3              --> 0x000A
+mult                 --> 0x000B
+resultat1            --> 0x000C
+resultat2            --> 0x000D
+resultat3            --> 0x000E
+pile                 --> 0x0014
+fondpile             --> 0x001E
+multiplier           --> 0x001F
+bcle                 --> 0x0022
+debut                --> 0x0028
+
+Table des Symboles :
+--------------------
+ModeEtat             --> 0x0FF3
+
+Informations de creation issues de la compilation :
+----------------------------------------------------
+IP_Address                 :10.3.54.17
+Host_Name                  :E2-003-17-L.eleve.interne.enac
+TAG_UID pour fichier 'asm' :6cc19d96b1ecfaf3e375ba6813687d35d9e17babf8e82ece9773181ab61d6e7b--date :Mon, 15 Sep 2025 13:58:25.6751904--taille :861
+TAG_UID pour fichier 'sim' :98746bc1e941825ef0715b634ce60b4c689b15dd1191b76978fb5aa95d1002d2--date :Tue, 15 Sep 2026 11:55:18.9340622--taille :289
+TAG_UID pour fichier 'lst' :069734887d9a8a39b6d11d46bb41f31ab4425b6fbc343a9e25f21b67a3d3e8d9--date :Tue, 15 Sep 2026 11:55:18.9496865--taille :5936
+----------------------------------------------------
